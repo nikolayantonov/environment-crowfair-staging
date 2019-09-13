@@ -1,0 +1,117 @@
+
+Showing logs for build [32mnikolayantonov-environment-crow-j6cmw-1[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-zkldz[0m
+{"level":"warn","ts":1568383819.1689603,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568383819.169309,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mnikolayantonov-environment-crow-j6cmw-1[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-69x6c[0m
+{"level":"warn","ts":1568383820.4941688,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568383820.4954195,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mnikolayantonov-environment-crow-j6cmw-1[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mnikolayantonov-environment-crow-j6cmw-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-nikolayantonov-environment-bk2fw[0m
+{"level":"warn","ts":1568383827.5537024,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568383827.772015,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/**************/environment-crowfair-staging.git @ d0b9b60b70e7a52d61e13a5421b263cbf26bf5e5 in path /workspace/source"}
+
+Showing logs for build [32mnikolayantonov-environment-crow-j6cmw-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:d0b9b60b70e7a52d61e13a5421b263cbf26bf5e5
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mnikolayantonov-environment-crow-j6cmw-1[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mnikolayantonov-environment-crow-j6cmw-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+selected pack: /builder/home/.**/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment
+Effective pipeline written to jenkins-x-promotion-effective.yml
+
+Showing logs for build [32mnikolayantonov-environment-crow-j6cmw-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: ** step next-version --use-git-tag-only --tag
+created new version: 0.0.1 and written to file: ./VERSION
+Tag v0.0.1 created and pushed to remote origin
+
+PipelineActivity for **************-environment-crowfair-staging-master-1
+Applying changes 
+upserted PipelineResource **************-environment-crow for the git repository https://github.com/**************/environment-crowfair-staging.git
+upserted Task **************-environment-crow-j6cmw-from-build-pack-1
+upserted Pipeline **************-environment-crow-j6cmw-1
+created PipelineRun **************-environment-crow-j6cmw-1
+created PipelineStructure **************-environment-crow-j6cmw-1
+
+Showing logs for build [32mnikolayantonov-environment-crow-j6cmw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-mr6g6[0m
+{"level":"warn","ts":1568383838.3397284,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568383838.3410046,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mnikolayantonov-environment-crow-j6cmw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-qsv6g[0m
+{"level":"warn","ts":1568383839.7671137,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568383839.7751849,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/env\""}
+
+Showing logs for build [32mnikolayantonov-environment-crow-j6cmw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mnikolayantonov-environment-crow-j6cmw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-nikolayantonov-environment-crow-5kzqj[0m
+{"level":"warn","ts":1568383844.7120783,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568383844.8941267,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/**************/environment-crowfair-staging.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32mnikolayantonov-environment-crow-j6cmw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:d0b9b60b70e7a52d61e13a5421b263cbf26bf5e5
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mnikolayantonov-environment-crow-j6cmw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /builder/home/git/credentials
+
+Showing logs for build [32mnikolayantonov-environment-crow-j6cmw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-apply[0m
+Modified file /workspace/source/env/Chart.yaml to set the chart to version 1
+Copying the helm source directory /workspace/source/env to a temporary location for building and applying /tmp/**-helm-apply-814447702/env
+Applying helm chart at /tmp/**-helm-apply-814447702/env as release name ** to namespace **-staging
+verifying the helm requirements versions in dir: . using version stream URL:  and git ref: 
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+Ignoring templates/.gitignore
+Wrote chart values.yaml /tmp/**-helm-apply-814447702/env/values.yaml generated from directory tree
+generated helm /tmp/**-helm-apply-814447702/env/values.yaml
+
+PipelineSecrets: {}
+cleanup:
+  Annotations:
+    helm.sh/hook: pre-delete
+    helm.sh/hook-delete-policy: hook-succeeded
+  Args:
+  - --cleanup
+controllerbuild:
+  enabled: true
+controllerworkflow:
+  enabled: false
+dockerRegistry: 955135126607.dkr.ecr.us-west-2.amazonaws.com
+expose:
+  Annotations:
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/hook-delete-policy: hook-succeeded
+  Args:
+  - --v
+  - 4
+  config:
+    domain: 34.215.145.249.nip.io
+    exposer: Ingress
+    http: "true"
+jenkins:
+  Servers:
+    Global:
+      EnvVars:
+        TILLER_NAMESPACE: kube-system
+  enabled: false
+prow: {}
+
+Using values files: /tmp/**-helm-apply-814447702/env/values.yaml
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+Applying Apps chart overrides
+Applying chart overrides
+
+
